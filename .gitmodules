@@ -1,0 +1,3 @@
+[submodule "Server_12_22_2021/Scriptable-OpenNetBattle-Server"]
+	path = Server_12_22_2021/Scriptable-OpenNetBattle-Server
+	url = https://github.com/ArthurCose/Scriptable-OpenNetBattle-Server
