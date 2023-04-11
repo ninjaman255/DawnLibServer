@@ -1,1 +1,1 @@
-./net_battle_server -p 2000
+./net_battle_server
