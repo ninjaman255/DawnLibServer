@@ -17,23 +17,849 @@
   <property name="Target Player Count" type="int" value="2"/>
   <property name="Waiting Area" value="ACDC 3"/>
  </properties>
- <tileset firstgid="1" source="../assets/tiles/panels.tsx"/>
- <tileset firstgid="71" source="../assets/tiles/walkable space.tsx"/>
- <tileset firstgid="77" source="../assets/tiles/selected tile.tsx"/>
- <tileset firstgid="83" source="../assets/tiles/Beach Tiles.tsx"/>
- <tileset firstgid="133" source="../assets/tiles/Beach_Next_Area.tsx"/>
- <tileset firstgid="165" source="../assets/tiles/ACDC_Net_Tileset.tsx"/>
- <tileset firstgid="168" source="../assets/tiles/Custom_Central_Tiles.tsx"/>
- <tileset firstgid="176" source="../assets/tiles/central_arrows.tsx"/>
- <tileset firstgid="180" source="../assets/tiles/Den_Exits.tsx"/>
- <tileset firstgid="198" source="../assets/tiles/DarkLiberationTileset.tsx"/>
- <tileset firstgid="243" source="../assets/tiles/DarkLiberationRamp.tsx"/>
- <tileset firstgid="247" source="../assets/tiles/LiberationArrow.tsx"/>
- <tileset firstgid="249" source="../assets/tiles/DarkLiberationArrow.tsx"/>
- <tileset firstgid="251" source="../assets/tiles/attack indicator.tsx"/>
- <tileset firstgid="252" source="../assets/tiles/Liberation Collision.tsx"/>
- <tileset firstgid="253" source="../assets/tiles/CompressionRoadsYoka.tsx"/>
- <tileset firstgid="297" source="../assets/tiles/Invisible Tile.tsx"/>
+ <tileset firstgid="1" name="panels" tilewidth="50" tileheight="30" tilecount="70" columns="7" objectalignment="top">
+  <tileoffset x="0" y="1"/>
+  <image source="../assets/tiles/panels.png" width="350" height="300"/>
+  <tile id="0">
+   <animation>
+    <frame tileid="0" duration="1000"/>
+    <frame tileid="7" duration="500"/>
+    <frame tileid="14" duration="500"/>
+    <frame tileid="21" duration="1000"/>
+    <frame tileid="14" duration="500"/>
+    <frame tileid="7" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="1">
+   <animation>
+    <frame tileid="1" duration="1000"/>
+    <frame tileid="8" duration="500"/>
+    <frame tileid="15" duration="500"/>
+    <frame tileid="22" duration="1000"/>
+    <frame tileid="15" duration="500"/>
+    <frame tileid="8" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="2">
+   <animation>
+    <frame tileid="2" duration="500"/>
+    <frame tileid="9" duration="500"/>
+    <frame tileid="16" duration="500"/>
+    <frame tileid="23" duration="500"/>
+    <frame tileid="16" duration="500"/>
+    <frame tileid="9" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="3">
+   <animation>
+    <frame tileid="3" duration="320"/>
+    <frame tileid="10" duration="320"/>
+    <frame tileid="17" duration="320"/>
+    <frame tileid="24" duration="320"/>
+    <frame tileid="17" duration="320"/>
+    <frame tileid="10" duration="320"/>
+   </animation>
+  </tile>
+  <tile id="4">
+   <animation>
+    <frame tileid="4" duration="180"/>
+    <frame tileid="11" duration="180"/>
+    <frame tileid="18" duration="180"/>
+    <frame tileid="25" duration="180"/>
+    <frame tileid="32" duration="180"/>
+    <frame tileid="39" duration="180"/>
+    <frame tileid="46" duration="180"/>
+    <frame tileid="53" duration="180"/>
+    <frame tileid="60" duration="180"/>
+    <frame tileid="67" duration="180"/>
+   </animation>
+  </tile>
+  <tile id="5">
+   <animation>
+    <frame tileid="5" duration="180"/>
+    <frame tileid="12" duration="180"/>
+    <frame tileid="19" duration="180"/>
+    <frame tileid="26" duration="180"/>
+    <frame tileid="33" duration="180"/>
+   </animation>
+  </tile>
+  <tile id="6">
+   <animation>
+    <frame tileid="6" duration="180"/>
+    <frame tileid="13" duration="180"/>
+    <frame tileid="20" duration="180"/>
+    <frame tileid="27" duration="180"/>
+    <frame tileid="34" duration="180"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="71" name="walkable space" tilewidth="64" tileheight="32" tilecount="6" columns="2">
+  <image source="../assets/tiles/walkable space.png" width="128" height="96"/>
+  <tile id="4" type="Arrow">
+   <properties>
+    <property name="Direction" value="Up Right"/>
+   </properties>
+  </tile>
+  <tile id="5" type="Arrow">
+   <properties>
+    <property name="Direction" value="Down Left"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="77" name="selected tile" tilewidth="64" tileheight="32" tilecount="6" columns="3" objectalignment="top">
+  <tileoffset x="0" y="-2"/>
+  <image source="../assets/tiles/selected tile.png" width="192" height="64"/>
+  <tile id="0">
+   <animation>
+    <frame tileid="0" duration="400"/>
+    <frame tileid="1" duration="400"/>
+   </animation>
+  </tile>
+  <tile id="1">
+   <animation>
+    <frame tileid="1" duration="320"/>
+    <frame tileid="2" duration="34"/>
+    <frame tileid="3" duration="34"/>
+    <frame tileid="4" duration="34"/>
+    <frame tileid="5" duration="128"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="83" name="Beach Tiles" tilewidth="64" tileheight="65" tilecount="50" columns="10" objectalignment="top">
+  <tileoffset x="0" y="32"/>
+  <image source="../assets/tiles/Beach Tileset.png" width="640" height="325"/>
+ </tileset>
+ <tileset firstgid="133" name="Beach_Next_Area" tilewidth="80" tileheight="56" tilecount="32" columns="8" objectalignment="top">
+  <tileoffset x="-16" y="16"/>
+  <grid orientation="isometric" width="80" height="56"/>
+  <image source="../assets/tiles/Beach_Next_Area.png" width="640" height="224"/>
+  <tile id="0">
+   <properties>
+    <property name="Direction" value="Up Right"/>
+    <property name="Type" value="Arrow"/>
+   </properties>
+   <animation>
+    <frame tileid="0" duration="166"/>
+    <frame tileid="1" duration="166"/>
+    <frame tileid="2" duration="166"/>
+    <frame tileid="3" duration="166"/>
+    <frame tileid="4" duration="166"/>
+    <frame tileid="5" duration="166"/>
+    <frame tileid="6" duration="166"/>
+    <frame tileid="7" duration="166"/>
+   </animation>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="Direction" value="Down Right"/>
+    <property name="Type" value="Arrow"/>
+   </properties>
+   <animation>
+    <frame tileid="8" duration="166"/>
+    <frame tileid="9" duration="166"/>
+    <frame tileid="10" duration="166"/>
+    <frame tileid="11" duration="166"/>
+    <frame tileid="12" duration="166"/>
+    <frame tileid="13" duration="166"/>
+    <frame tileid="14" duration="166"/>
+    <frame tileid="15" duration="166"/>
+   </animation>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="Direction" value="Up Right"/>
+    <property name="Type" value="Arrow"/>
+   </properties>
+   <animation>
+    <frame tileid="16" duration="166"/>
+    <frame tileid="17" duration="166"/>
+    <frame tileid="18" duration="166"/>
+    <frame tileid="19" duration="166"/>
+    <frame tileid="20" duration="166"/>
+    <frame tileid="21" duration="166"/>
+    <frame tileid="22" duration="166"/>
+    <frame tileid="23" duration="166"/>
+   </animation>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="Direction" value="Down Right"/>
+    <property name="Type" value="Arrow"/>
+   </properties>
+   <animation>
+    <frame tileid="24" duration="166"/>
+    <frame tileid="25" duration="166"/>
+    <frame tileid="26" duration="166"/>
+    <frame tileid="27" duration="166"/>
+    <frame tileid="28" duration="166"/>
+    <frame tileid="29" duration="166"/>
+    <frame tileid="30" duration="166"/>
+    <frame tileid="31" duration="166"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="165" name="ACDC_Net_Tileset" tilewidth="62" tileheight="36" tilecount="3" columns="3">
+  <tileoffset x="0" y="6"/>
+  <image source="../assets/tiles/ACDC_Net_Tileset.png" width="186" height="36"/>
+ </tileset>
+ <tileset firstgid="168" name="Custom_Central_Tiles" tilewidth="64" tileheight="40" tilecount="8" columns="2">
+  <tileoffset x="0" y="8"/>
+  <image source="../assets/tiles/Custom_Central_Tiles.png" width="128" height="160"/>
+ </tileset>
+ <tileset firstgid="176" name="central_arrows" tilewidth="96" tileheight="64" tilecount="4" columns="2" objectalignment="top">
+  <tileoffset x="0" y="16"/>
+  <grid orientation="orthogonal" width="96" height="96"/>
+  <transformations hflip="1" vflip="1" rotate="0" preferuntransformed="0"/>
+  <image source="../assets/tiles/central_arrows.png" trans="000000" width="256" height="128"/>
+  <tile id="0">
+   <properties>
+    <property name="Direction" value="Up Left"/>
+    <property name="Type" value="Arrow"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Direction" value="Up Right"/>
+    <property name="Type" value="Arrow"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="Direction" value="Down Left"/>
+    <property name="Type" value="Arrow"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="Direction" value="Down Right"/>
+    <property name="Type" value="Arrow"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="180" name="Den_Exits" tilewidth="64" tileheight="40" tilecount="18" columns="3">
+  <tileoffset x="0" y="8"/>
+  <image source="../assets/tiles/Den_Exits.png" width="192" height="240"/>
+  <tile id="0">
+   <animation>
+    <frame tileid="1" duration="200"/>
+    <frame tileid="2" duration="200"/>
+    <frame tileid="0" duration="200"/>
+   </animation>
+  </tile>
+  <tile id="3">
+   <animation>
+    <frame tileid="4" duration="200"/>
+    <frame tileid="5" duration="200"/>
+    <frame tileid="3" duration="200"/>
+   </animation>
+  </tile>
+  <tile id="6">
+   <animation>
+    <frame tileid="7" duration="200"/>
+    <frame tileid="8" duration="200"/>
+    <frame tileid="6" duration="200"/>
+   </animation>
+  </tile>
+  <tile id="9">
+   <animation>
+    <frame tileid="10" duration="200"/>
+    <frame tileid="11" duration="200"/>
+    <frame tileid="9" duration="200"/>
+   </animation>
+  </tile>
+  <tile id="12">
+   <animation>
+    <frame tileid="13" duration="200"/>
+    <frame tileid="14" duration="200"/>
+    <frame tileid="12" duration="200"/>
+   </animation>
+  </tile>
+  <tile id="15">
+   <animation>
+    <frame tileid="16" duration="200"/>
+    <frame tileid="17" duration="200"/>
+    <frame tileid="15" duration="200"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="198" name="DarkLiberationTileset" tilewidth="64" tileheight="36" tilecount="45" columns="5">
+  <tileoffset x="0" y="4"/>
+  <image source="../assets/tiles/DarkLiberationTileset.png" width="320" height="324"/>
+ </tileset>
+ <tileset firstgid="243" name="DarkLiberationRamp" tilewidth="64" tileheight="51" tilecount="4" columns="4">
+  <tileoffset x="0" y="3"/>
+  <image source="../assets/tiles/DarkLiberationRamp.png" width="256" height="51"/>
+  <tile id="0" type="Stairs">
+   <properties>
+    <property name="Direction" value="Up Right"/>
+   </properties>
+  </tile>
+  <tile id="1" type="Stairs">
+   <properties>
+    <property name="Direction" value="Up Left"/>
+   </properties>
+  </tile>
+  <tile id="2" type="Stairs">
+   <properties>
+    <property name="Direction" value="Up Right"/>
+   </properties>
+  </tile>
+  <tile id="3" type="Stairs">
+   <properties>
+    <property name="Direction" value="Up Left"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="247" name="LiberationArrow" tilewidth="64" tileheight="36" tilecount="2" columns="1">
+  <tileoffset x="0" y="4"/>
+  <image source="../assets/tiles/LiberationArrow.png" width="64" height="72"/>
+ </tileset>
+ <tileset firstgid="249" name="DarkLiberationArrow" tilewidth="64" tileheight="36" tilecount="2" columns="1">
+  <tileoffset x="0" y="4"/>
+  <image source="../assets/tiles/DarkLiberationArrow.png" width="64" height="72"/>
+ </tileset>
+ <tileset firstgid="251" name="attack indicator" tilewidth="48" tileheight="24" tilecount="1" columns="1" objectalignment="top">
+  <tileoffset x="0" y="3"/>
+  <image source="../assets/tiles/attack indicator.png" width="48" height="24"/>
+ </tileset>
+ <tileset firstgid="252" name="Liberation Collision" tilewidth="50" tileheight="30" tilecount="1" columns="1" objectalignment="top">
+  <tileoffset x="0" y="1"/>
+  <image source="../assets/tiles/Liberation Collision.png" width="50" height="30"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="25" y="-2">
+     <polygon points="0,0 33,17 0,34 -33,17"/>
+    </object>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="253" name="CompressionRoadsYoka" tilewidth="64" tileheight="32" tilecount="44" columns="11">
+  <image source="../assets/tiles/CompressionRoadsYoka.png" width="704" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="13" x="40" y="-4">
+     <polygon points="-8,-4 40,20 5,20 -27,4"/>
+    </object>
+    <object id="14" x="8" y="12">
+     <polygon points="-8,-4 24,12 24,28 -24,4"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index" id="3">
+    <object id="12" x="32" y="-8">
+     <polygon points="0,0 19,8 -13,24 -48,24"/>
+    </object>
+    <object id="13" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -32,16"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object id="3" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="4" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="5" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object id="1" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="3" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="4" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object id="1" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="3" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="4" x="32" y="24">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object id="4" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="5" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="6" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object id="8" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="9" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="10" x="64" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object id="7" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="8" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object id="9" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="10" x="64" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="11" x="32" y="24">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object id="3" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="4" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index" id="2">
+    <object id="3" x="32" y="-8">
+     <polygon points="0,0 0,18 -31,33 -48,24"/>
+    </object>
+    <object id="4" x="64" y="8">
+     <polygon points="-16,8 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index" id="2">
+    <object id="8" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,30 -8,14"/>
+    </object>
+    <object id="9" x="8" y="12">
+     <polygon points="8,4 40,20 24,28 -24,4"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object id="8" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="9" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="11" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object id="3" x="32" y="0">
+     <polygon points="0,-8 48,16 32,24 -16,0"/>
+    </object>
+    <object id="5" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object id="1" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="4" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="5" x="0" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index">
+    <object id="9" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="10" x="32" y="24">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="11" x="0" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index">
+    <object id="8" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="10" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="11" x="32" y="-8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="18">
+   <objectgroup draworder="index">
+    <object id="11" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="12" x="32" y="-8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="13" x="64" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object id="12" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="13" x="0" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="14" x="32" y="-8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="20">
+   <objectgroup draworder="index">
+    <object id="1" x="32" y="-8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="2" x="0" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="3" x="64" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="4" x="32" y="24">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="21">
+   <objectgroup draworder="index">
+    <object id="1" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="2" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="22">
+   <objectgroup draworder="index" id="2">
+    <object id="4" x="40" y="-4">
+     <polygon points="-8,-4 40,20 5,20 -27,4"/>
+    </object>
+    <object id="5" x="8" y="12">
+     <polygon points="-8,-4 24,12 24,28 -24,4"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="23">
+   <objectgroup draworder="index" id="2">
+    <object id="16" x="32" y="-8">
+     <polygon points="0,0 20,8 -12,24 -48,24"/>
+    </object>
+    <object id="17" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -32,16"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="24">
+   <objectgroup draworder="index">
+    <object id="5" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="6" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="7" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="8" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="25">
+   <objectgroup draworder="index">
+    <object id="4" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="5" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="6" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="26">
+   <objectgroup draworder="index">
+    <object id="1" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="3" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="4" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="27">
+   <objectgroup draworder="index">
+    <object id="1" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="3" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="4" x="32" y="24">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="28">
+   <objectgroup draworder="index">
+    <object id="4" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="5" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="6" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="29">
+   <objectgroup draworder="index">
+    <object id="7" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="8" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="9" x="64" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="30">
+   <objectgroup draworder="index">
+    <object id="7" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="8" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="31">
+   <objectgroup draworder="index">
+    <object id="9" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="10" x="64" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="11" x="32" y="24">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="32">
+   <objectgroup draworder="index">
+    <object id="3" x="32" y="-8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="4" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="33">
+   <objectgroup draworder="index" id="2">
+    <object id="4" x="32" y="-8">
+     <polygon points="0,0 0,18 -32,34 -48,24"/>
+    </object>
+    <object id="5" x="64" y="8">
+     <polygon points="-16,8 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="34">
+   <objectgroup draworder="index" id="2">
+    <object id="10" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,30 -8,14"/>
+    </object>
+    <object id="11" x="8" y="12">
+     <polygon points="8,4 40,20 24,28 -24,4"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="35">
+   <objectgroup draworder="index">
+    <object id="4" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="5" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="7" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="36">
+   <objectgroup draworder="index">
+    <object id="7" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="8" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="37">
+   <objectgroup draworder="index">
+    <object id="1" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="4" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="5" x="0" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="38">
+   <objectgroup draworder="index">
+    <object id="12" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="13" x="0" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="14" x="32" y="24">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="39">
+   <objectgroup draworder="index">
+    <object id="8" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="10" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="11" x="32" y="-8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="40">
+   <objectgroup draworder="index">
+    <object id="10" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="11" x="32" y="-8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="12" x="64" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="41">
+   <objectgroup draworder="index">
+    <object id="10" x="64" y="8">
+     <polygon points="0,0 16,8 -32,32 -48,24"/>
+    </object>
+    <object id="11" x="32" y="-8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="12" x="0" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="42">
+   <objectgroup draworder="index">
+    <object id="1" x="32" y="-8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="2" x="0" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="3" x="64" y="8">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+    <object id="4" x="32" y="24">
+     <polygon points="0,0 16,8 0,16 -16,8"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="43">
+   <objectgroup draworder="index">
+    <object id="5" x="40" y="-4">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+    <object id="6" x="8" y="12">
+     <polygon points="-8,-4 40,20 24,28 -24,4"/>
+    </object>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="297" name="Invisible Tile" tilewidth="64" tileheight="32" tilecount="1" columns="1">
+  <image source="../assets/tiles/Invisible Tile.png" width="64" height="32"/>
+  <tile id="0" type="Invisible"/>
+ </tileset>
  <layer id="1" name="Tile Layer 1" width="30" height="25">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,202,207,207,207,200,0,0,0,0,0,0,0,0,0,0,
