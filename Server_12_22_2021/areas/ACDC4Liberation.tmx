@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.6" orientation="isometric" renderorder="right-down" width="30" height="25" tilewidth="64" tileheight="32" infinite="0" nextlayerid="29" nextobjectid="251">
+<map version="1.8" tiledversion="1.8.6" orientation="isometric" renderorder="right-down" width="30" height="25" tilewidth="64" tileheight="32" infinite="0" nextlayerid="29" nextobjectid="255">
  <properties>
   <property name="Background" value="custom"/>
   <property name="Background Animation" value="/server/assets/NebuLibsAssets/backgrounds/ACDC/ACDC.animation"/>
@@ -33,6 +33,7 @@
  <tileset firstgid="251" source="../assets/tiles/attack indicator.tsx"/>
  <tileset firstgid="252" source="../assets/tiles/Liberation Collision.tsx"/>
  <tileset firstgid="253" source="../assets/tiles/CompressionRoadsYoka.tsx"/>
+ <tileset firstgid="297" source="../assets/tiles/Invisible Tile.tsx"/>
  <layer id="1" name="Tile Layer 1" width="30" height="25">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,202,207,207,207,200,0,0,0,0,0,0,0,0,0,0,
@@ -334,5 +335,9 @@
   </object>
   <object id="130" type="Bonus Panel" gid="5" x="0" y="416" width="50" height="30"/>
   <object id="147" type="Dark Panel" gid="1" x="32" y="448" width="50" height="30"/>
+  <object id="251" gid="297" x="960" y="800" width="64" height="32" visible="0"/>
+  <object id="252" gid="252" x="928" y="736" width="50" height="30" visible="0"/>
+  <object id="253" gid="251" x="928" y="704" width="48" height="24" visible="0"/>
+  <object id="254" gid="77" x="896" y="768" width="64" height="32" visible="0"/>
  </objectgroup>
 </map>
