@@ -562,9 +562,9 @@
    </properties>
    <point/>
   </object>
-  <object id="351" gid="120" x="704" y="0" width="64" height="32" visible="0"/>
-  <object id="352" gid="49" x="704" y="32" width="64" height="32" visible="0"/>
-  <object id="353" gid="1" x="640" y="0" width="50" height="30" visible="0"/>
-  <object id="354" gid="126" x="608" y="0" width="48" height="24" visible="0"/>
+  <object id="351" gid="120" x="704" y="0" width="64" height="32"/>
+  <object id="352" gid="49" x="704" y="32" width="64" height="32"/>
+  <object id="353" gid="1" x="640" y="0" width="50" height="30"/>
+  <object id="354" gid="126" x="608" y="0" width="48" height="24"/>
  </objectgroup>
 </map>

@@ -335,9 +335,9 @@
   </object>
   <object id="130" type="Bonus Panel" gid="5" x="0" y="416" width="50" height="30"/>
   <object id="147" type="Dark Panel" gid="1" x="32" y="448" width="50" height="30"/>
-  <object id="251" gid="297" x="960" y="800" width="64" height="32" visible="0"/>
-  <object id="252" gid="252" x="928" y="736" width="50" height="30" visible="0"/>
-  <object id="253" gid="251" x="928" y="704" width="48" height="24" visible="0"/>
-  <object id="254" gid="77" x="896" y="768" width="64" height="32" visible="0"/>
+  <object id="251" gid="297" x="960" y="800" width="64" height="32"/>
+  <object id="252" gid="252" x="928" y="736" width="50" height="30"/>
+  <object id="253" gid="251" x="928" y="704" width="48" height="24"/>
+  <object id="254" gid="77" x="896" y="768" width="64" height="32"/>
  </objectgroup>
 </map>
